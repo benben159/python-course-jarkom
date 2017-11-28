@@ -2,7 +2,6 @@ import socket
 
 sock_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock_server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-sock_server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
 sock_server.bind(('127.0.0.1',9999))
 sock_server.listen(1)
 client, addr = sock_server.accept()
